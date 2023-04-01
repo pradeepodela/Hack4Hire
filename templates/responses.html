@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responses</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+	</style>
+</head>
+<body>
+	<h1>Responses</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Email</th>
+				<th>Class</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for response in responses %}
+			<tr>
+				<td>{{ response[0] }}</td>
+				<td>{{ response[1]['lets start with your name ??'][0] }}</td>
+				<td>{{ response[1]['whats your  age?'][0] }}</td>
+				<td>{{ response[1]['what is your email??'][0] }}</td>
+				<td>{{ response[1]['ur class?'][0] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
